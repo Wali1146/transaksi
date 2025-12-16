@@ -6,7 +6,6 @@ import ui.ft.ccit.faculty.transaksi.barang.model.Barang;
 import ui.ft.ccit.faculty.transaksi.barang.model.BarangRepository;
 
 import org.springframework.data.domain.PageRequest;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
