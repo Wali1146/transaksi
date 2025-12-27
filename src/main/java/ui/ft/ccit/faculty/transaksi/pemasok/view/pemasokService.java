@@ -1,5 +1,5 @@
 package ui.ft.ccit.faculty.transaksi.pemasok.view;
 
-public class pemasokService {
+public class PemasokService {
     
 }

@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "detail_transaksi")
-public class detailTransaksi {
+public class DetailTransaksi {
     @Id
     @Column(name = "kode_transaksi", length = 4)
     private String kodeTransaksi;
@@ -15,11 +15,11 @@ public class detailTransaksi {
     @Column(name = "jumlah", length = 6)
     private Integer jumlah;
 
-    protected detailTransaksi(){
+    protected DetailTransaksi(){
         // for JPA
     }
 
-    public detailTransaksi(String kodeTransaksi, String idBarang, Integer jumlah){
+    public DetailTransaksi(String kodeTransaksi, String idBarang, Integer jumlah){
         this.kodeTransaksi = kodeTransaksi;
         this.idBarang = idBarang;
         this.jumlah = jumlah;

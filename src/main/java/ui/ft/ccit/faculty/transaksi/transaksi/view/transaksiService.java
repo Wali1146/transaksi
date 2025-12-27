@@ -1,5 +1,5 @@
 package ui.ft.ccit.faculty.transaksi.transaksi.view;
 
-public class transaksiService {
+public class TransaksiService {
     
 }

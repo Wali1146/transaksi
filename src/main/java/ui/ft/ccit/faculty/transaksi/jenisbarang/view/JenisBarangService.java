@@ -19,6 +19,7 @@ public class JenisBarangService {
         this.jenisBarangRepository = jenisBarangRepository;
     }
 
+    // Tampilkan semua jenis barang
     public List<JenisBarang> getAll() {
         return jenisBarangRepository.findAll();
     }
@@ -29,13 +30,20 @@ public class JenisBarangService {
         .getContent();
     }
 
+    // Cari jenis barang berdasarkan id
     public JenisBarang getById(Byte id) {
         return jenisBarangRepository.findById(id)
         .orElseThrow(() -> new RuntimeException("Jenis Barang dengan id " + id + " tidak ditemukan"));
     }
 
+    // CUSTOM: Cari barang berdasarkan nama tertentu
     public List<JenisBarang> searchByNama(String keyword) {
         return jenisBarangRepository.findByNamaJenisContainingIgnoreCase(keyword);
+    }
+
+    // CUSTOM: Cari barang berdasarkan id Jenis
+    public List<Barang> getBarangByJenis(Byte idJenis) {
+        return jenisBarangRepository.findBarangByJenisId(idJenis);
     }
 
     // CREATE
@@ -90,10 +98,5 @@ public class JenisBarangService {
         }
 
         jenisBarangRepository.deleteAllById(ids);
-    }
-
-    // CUSTOM: Cari barang berdasarkan id Jenis
-    public List<Barang> getBarangByJenis(Byte idJenis) {
-        return jenisBarangRepository.findBarangByJenisId(idJenis);
     }
 }

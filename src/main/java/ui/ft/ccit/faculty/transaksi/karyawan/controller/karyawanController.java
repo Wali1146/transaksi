@@ -1,5 +1,5 @@
 package ui.ft.ccit.faculty.transaksi.karyawan.controller;
 
-public class karyawanController {
+public class KaryawanController {
     
 }
