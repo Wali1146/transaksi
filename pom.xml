@@ -109,19 +109,6 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- Security dasar -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
-
-		<!-- KHUSUS PENGGUNA TOKEN: Resource server JWT berbasis OAuth2 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
-		</dependency>
-		
-		<!-- springdoc openapi ui -->
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>

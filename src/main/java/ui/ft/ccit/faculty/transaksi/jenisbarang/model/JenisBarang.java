@@ -1,4 +1,4 @@
-package ui.ft.ccit.faculty.transaksi.jenisbarang.model;
+package ui.ft.ccit.faculty.transaksi.jenisBarang.model;
 
 import jakarta.persistence.*;
 
