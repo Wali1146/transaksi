@@ -92,9 +92,9 @@ public class JenisBarangService {
         }
 
         // Cek apakah semua id yang dikirim memang ada di DB
-        long count = ids.stream().filter(jenisBarangRepository::existsById).count();
-        if (count != ids.size()) {
-            throw new IllegalStateException("Sebagian id tidak ditemukan, operasi dibatalkan");
+        long existingCount = jenisBarangRepository.countByIdJenisBarangIn(ids);
+        if (existingCount != ids.size()) {
+            throw new IllegalStateException("Sebagian ID tidak ditemukan, operasi dibatalkan");
         }
 
         jenisBarangRepository.deleteAllById(ids);

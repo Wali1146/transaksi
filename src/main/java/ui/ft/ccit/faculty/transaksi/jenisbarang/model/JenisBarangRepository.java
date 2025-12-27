@@ -13,4 +13,7 @@ public interface JenisBarangRepository extends JpaRepository<JenisBarang, Byte> 
     // cari barang berdasarkan suatu jenis
     @Query("SELECT b FROM Barang b WHERE b.idJenisBarang = :id")
     List<Barang> findBarangByJenisId(@Param("id") Byte id);
+
+    // Berapa banyak jenis barang berdasarkan id
+    long countByIdJenisBarangIn(List<Byte> ids);
 }

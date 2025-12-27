@@ -91,8 +91,8 @@ public class BarangService {
         }
 
         // hard limit untuk keamanan
-        if (ids.size() > 100) {
-            throw new IllegalArgumentException("Maksimal 100 data per bulk delete");
+        if (ids.size() > 10) {
+            throw new IllegalArgumentException("Maksimal 10 data per bulk delete");
         }
 
         // validasi: pastikan semua ID ada
